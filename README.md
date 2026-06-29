@@ -14,10 +14,8 @@ Rather than building a complete production recommendation system, this project i
 
 The primary goals of this project are to:
 
-* Implement multiple similarity measurement techniques.
-* Generate recommendation candidates using different strategies.
-* Score and rank recommendations using weighted factors.
-* Evaluate recommendation quality using standard metrics.
+* Implement multiple similarity measurement techniques to generate recommendation candidates.
+* Score, rank and evaluate recommendations using weighted factors.
 * Handle common recommendation system challenges such as cold-start users and missing data.
 * Build a modular architecture that can be extended into a complete recommendation system.
 
@@ -26,7 +24,7 @@ The primary goals of this project are to:
 ## Project Structure
 
 ```
-day29_project/
+recommendation-engine-self/
 
 ├── similarity.py
 ├── candidate_gen.py
@@ -51,21 +49,11 @@ Implemented similarity metrics:
 * Jaccard Similarity
 * Pearson Correlation
 
-Features:
-
-* Vector similarity calculation
-* Set similarity comparison
-* User rating correlation analysis
-* Edge case handling
-* Input validation
-* Test coverage
-
 Use cases:
 
 * User-to-user similarity
 * Item-to-item similarity
 * Preference matching
-* Collaborative filtering support
 
 ---
 
@@ -80,17 +68,11 @@ Implemented recommendation methods:
 * Popularity-Based Recommendations
 * Hybrid Recommendations
 
-Features:
-
-* Similar user discovery
-* Content similarity matching
-* Global popularity recommendations
-* Multi-strategy recommendation generation
-* Cold-start user handling
-* Result limiting and filtering
 
 Use cases:
 
+* Cold-start user handling
+* Similar user discovery
 * Personalized recommendations
 * New user recommendations
 * Item discovery
@@ -154,8 +136,7 @@ Features:
 
 Evaluation objectives:
 
-* Measure recommendation accuracy
-* Measure recommendation coverage
+* Measure recommendation accuracy and coverage
 * Measure ranking effectiveness
 
 ---
@@ -172,67 +153,8 @@ The project uses a small in-memory sample dataset containing:
 * Item relevance scores
 * Ground truth evaluation data
 
-The dataset is intentionally simple to demonstrate recommendation system concepts without requiring external databases.
+The dataset is intentionally simple to demonstrate recommendation system concepts **without requiring external databases.**
 
----
-
-## Recommendation Pipeline
-
-The recommendation workflow follows the standard recommendation system architecture:
-
-```
-User Data
-     ↓
-Similarity Calculation
-     ↓
-Candidate Generation
-     ↓
-Recommendation Scoring
-     ↓
-Recommendation Ranking
-     ↓
-Final Recommendations
-     ↓
-Evaluation
-```
-
----
-
-## Features Implemented
-
-### Similarity Features
-
-* Cosine similarity
-* Jaccard similarity
-* Pearson correlation
-* Edge case handling
-* Zero vector handling
-* Empty set handling
-
-### Candidate Generation Features
-
-* Collaborative filtering
-* Content-based filtering
-* Popularity recommendations
-* Hybrid recommendations
-* Cold-start support
-* Candidate filtering
-
-### Ranking Features
-
-* Weighted scoring
-* Dynamic scorer registration
-* Recommendation explanations
-* Score normalization
-* Candidate ranking
-
-### Evaluation Features
-
-* Precision@K
-* Recall@K
-* NDCG@K
-* Aggregate evaluation
-* Missing data handling
 
 ---
 
@@ -252,21 +174,6 @@ Run all tests using:
 ```bash
 python test.py
 ```
-
----
-
-## Key Concepts Demonstrated
-
-This project demonstrates several important recommendation system concepts:
-
-* Collaborative Filtering
-* Content-Based Filtering
-* Hybrid Recommendation Systems
-* Similarity Measurement
-* Recommendation Ranking
-* Explainable Recommendations
-* Recommendation Evaluation
-* Cold-Start Problem Handling
 
 ---
 
